@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import ElementosNavbar from '../data/ElementosNavbar';
+import { ElementosNavbar } from '../data/ElementosNavbar';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -24,4 +24,5 @@ class Navbar extends React.Component {
     );
   }
 }
+
 export default Navbar;

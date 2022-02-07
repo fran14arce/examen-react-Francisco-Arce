@@ -1,7 +1,6 @@
 import Ejercicio1 from '../components/Ejercicio1';
 import Ejercicio2 from '../components/Ejercicio2';
 import Ejercicio3 from '../components/Ejercicio3';
-import Ejercicio4 from '../components/Ejercicio4';
 
 export const ElementosNavbar = [
   {
@@ -21,11 +20,5 @@ export const ElementosNavbar = [
     path: '../components/Ejercicio3',
     title: 'Ejercicio 3',
     component: Ejercicio3,
-  },
-  {
-    id: 4,
-    path: '../components/Ejercicio4',
-    title: 'Ejercicio 4',
-    component: Ejercicio4,
   },
 ];
