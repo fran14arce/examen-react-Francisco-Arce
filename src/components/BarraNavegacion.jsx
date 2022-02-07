@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { ElementosNavbar } from '../data/MenuElements';
+import { ElementosNavbar } from '../data/ElementosNavbar';
 
 class BarraNavegacion extends React.Component {
   constructor(props) {
