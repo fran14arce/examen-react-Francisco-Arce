@@ -1,14 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './style.css';
-import Navbar from './components/Navbar';
+import BarraNavegacion from './components/BarraNavegacion';
+import { ElementosNavbar } from './data/ElementosNavbar';
 import Ejercicio1 from './components/Ejercicio1';
 import Ejercicio2 from './components/Ejercicio2';
 import Ejercicio3 from './components/Ejercicio3';
 
 export default function App() {
   return (
-    <>
-      <Navbar />
+    <Router>
+      <BarraNavegacion />
       <h1>Desarrollo de Interfaces: Examen React.js </h1>
       <p>
         Resuelve los ejercicios propuestos en los distintos apartados de la
@@ -17,9 +19,17 @@ export default function App() {
         tener el nombre examen-react-Nombre-Apellido1, donde nombre y apellido
         son los tuyos.
       </p>
-      <Ejercicio1 />
-      <Ejercicio2 />
-      <Ejercicio3 />
-    </>
+      {ElementosNavbar.map((item) => {
+        return (
+          <Route
+            key={item.id}
+            path={item.path}
+            exact
+            component={item.component}
+          />
+        );
+      })}
+      
+    </Router>
   );
 }
